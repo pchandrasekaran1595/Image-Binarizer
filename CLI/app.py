@@ -41,6 +41,7 @@ def run():
     if args_4[0] in sys.argv or args_4[1] in sys.argv: save = True
 
     assert filename is not None, "Enter an argument for --file | -f"
+    assert filename in os.listdir(READ_PATH), "File Not Found"
 
     if gray: image = cv2.imread(os.path.join(READ_PATH, filename), cv2.IMREAD_GRAYSCALE)
     else: image = cv2.imread(os.path.join(READ_PATH, filename))
