@@ -43,7 +43,7 @@ def run():
     assert filename is not None, "Enter an argument for --file | -f"
 
     if gray: image = cv2.imread(os.path.join(READ_PATH, filename), cv2.IMREAD_GRAYSCALE)
-    else: image = src=cv2.imread(os.path.join(READ_PATH, filename), cv2.IMREAD_COLOR)
+    else: image = cv2.imread(os.path.join(READ_PATH, filename))
     
     image[image > threshold] = 255
     image[image <= threshold] = 0
