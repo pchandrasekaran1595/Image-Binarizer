@@ -1,6 +1,7 @@
 __pycache__
-Files
-Processed
+output
 venv
+.vscode
 *.jpg
 *.png
+!Test_1.jpg
